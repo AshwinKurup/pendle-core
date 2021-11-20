@@ -21,8 +21,7 @@ import {
   mintCompoundToken,
   stake,
   tokenizeYield,
-  tokens,
-  getContractAt,
+  tokens
 } from '../../helpers';
 const { waffle } = require('hardhat');
 chai.use(solidity);

@@ -1,6 +1,7 @@
 import "@nomiclabs/hardhat-truffle5";
 import "@nomiclabs/hardhat-waffle";
 import "@nomiclabs/hardhat-web3";
+import "@nomiclabs/hardhat-ethers";
 import "@tenderly/hardhat-tenderly";
 import "@nomiclabs/hardhat-etherscan";
 import * as dotenv from "dotenv";
@@ -31,10 +32,10 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       forking: {
-        url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_KEY}`,
+        url: "https://eth-rinkeby.alchemyapi.io/v2/2vaXZv-UuHAnYFX0ROuzY9XXDwTibw35",
         // url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
         // url: 'http://localhost:8545',
-        blockNumber: 12372265
+        blockNumber: 9627654
       },
       accounts: [
         // 5 accounts with 10^14 ETH each
@@ -77,11 +78,11 @@ const config: HardhatUserConfig = {
       timeout: 1000000,
       gasPrice: 100e9
     },
-    kovan: {
-      url: `https://kovan.infura.io/v3/${process.env.INFURA_KEY || "dummyKey"}`,
+    rinkeyb: {
+      url: `"https://eth-rinkeby.alchemyapi.io/v2/2vaXZv-UuHAnYFX0ROuzY9XXDwTibw35" || "dummyKey"}`,
       gas: 8000000,
       timeout: 100000,
-      accounts: [`${process.env.PRIVATE_KEYS || dummyPrivateKey}`],
+      accounts: [`${'3e8b6d7b6ee675058cece73086631f1676d9c73486e5cb46c20c92df24f98c8b'}`],
     },
     // kovantest: {
     //   // url: `https://eth-kovan.alchemyapi.io/v2/${process.env.ALCHEMY_KEY}`,
